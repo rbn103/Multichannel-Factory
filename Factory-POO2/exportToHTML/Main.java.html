@@ -1,0 +1,37 @@
+<html>
+<head>
+<title>Main.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #7a7e85;}
+.s1 { color: #bcbec4;}
+.s2 { color: #cf8e6d;}
+.s3 { color: #bcbec4;}
+.s4 { color: #2aacb8;}
+.s5 { color: #6aab73;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Main.java</font>
+</center></td></tr></table>
+<pre><span class="s0">//TIP To &lt;b&gt;Run&lt;/b&gt; code, press &lt;shortcut actionId=&quot;Run&quot;/&gt; or</span>
+<span class="s0">// click the &lt;icon src=&quot;AllIcons.Actions.Execute&quot;/&gt; icon in the gutter.</span>
+<span class="s2">public class </span><span class="s1">Main </span><span class="s3">{</span>
+    <span class="s2">public static void </span><span class="s1">main</span><span class="s3">(</span><span class="s1">String</span><span class="s3">[] </span><span class="s1">args</span><span class="s3">) {</span>
+        <span class="s1">Notificador nv </span><span class="s3">= </span><span class="s2">new </span><span class="s1">NotificadorVoz</span><span class="s3">();</span>
+        <span class="s1">String mensajeLargo </span><span class="s3">= </span><span class="s2">new </span><span class="s1">String</span><span class="s3">(</span><span class="s2">new char</span><span class="s3">[</span><span class="s4">10</span><span class="s3">]).</span><span class="s1">replace</span><span class="s3">(</span><span class="s5">'</span><span class="s2">\0</span><span class="s5">'</span><span class="s3">, </span><span class="s5">'A'</span><span class="s3">);</span>
+        <span class="s1">nv</span><span class="s3">.</span><span class="s1">enviarNotificacion</span><span class="s3">(</span><span class="s5">&quot;mi casa&quot;</span><span class="s3">, </span><span class="s1">mensajeLargo</span><span class="s3">);</span>
+
+        <span class="s1">Notificador nws </span><span class="s3">= </span><span class="s2">new </span><span class="s1">NotificadorWhatsApp</span><span class="s3">();</span>
+        <span class="s1">nws</span><span class="s3">.</span><span class="s1">enviarNotificacion</span><span class="s3">(</span><span class="s5">&quot;12345678&quot;</span><span class="s3">, </span><span class="s5">&quot;Mensaje urgente por WhatsApp&quot;</span><span class="s3">);</span>
+
+        <span class="s1">Notificador ns </span><span class="s3">= </span><span class="s2">new </span><span class="s1">NotificadorSirena</span><span class="s3">();</span>
+        <span class="s1">ns</span><span class="s3">.</span><span class="s1">enviarNotificacion</span><span class="s3">(</span><span class="s5">&quot;12345678&quot;</span><span class="s3">, </span><span class="s5">&quot;Alerta crítica: evacuación inmediata&quot;</span><span class="s3">);</span>
+    <span class="s3">}</span>
+<span class="s3">}</span>
+</pre>
+</body>
+</html>
